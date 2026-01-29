@@ -7,8 +7,9 @@ const Itinerary = require("./models/Itinerary"); // Import Schema
 
 const app = express();
 app.use(cors({
-  origin: "https://your-frontend-url.vercel.app",
-  methods: ["GET", "POST"]
+  origin: ["https://ai-itinerary-planner-henna.vercel.app/", "http://localhost:5173"],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
 }));
 app.use(express.json());
 
