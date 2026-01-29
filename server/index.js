@@ -6,7 +6,10 @@ const Groq = require("groq-sdk");
 const Itinerary = require("./models/Itinerary"); // Import Schema
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: "https://your-frontend-url.vercel.app",
+  methods: ["GET", "POST"]
+}));
 app.use(express.json());
 
 // 1. Connect to MongoDB
