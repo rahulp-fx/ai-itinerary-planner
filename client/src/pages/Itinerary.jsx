@@ -23,7 +23,7 @@ export default function Itinerary() {
   useEffect(() => {
     const fetchTrip = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/itinerary/${id}`);
+        const response = await axios.get(`https://vercel.com/rahulp-fxs-projects/ai-itinerary-planner/Dugb4wc5h54jmRE3fnrCdBBVfvhT/${id}`);
         setTrip(response.data);
       } catch (error) {
         console.error("Error fetching trip:", error);

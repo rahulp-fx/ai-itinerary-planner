@@ -42,7 +42,7 @@ export default function Home() {
     setLoading(true);
 
     try {
-      const response = await axios.post("http://localhost:5000/api/generate-itinerary", {
+      const response = await axios.post("https://vercel.com/rahulp-fxs-projects/ai-itinerary-planner/Dugb4wc5h54jmRE3fnrCdBBVfvhT", {
         ...formData,
         preferences: formData.preferences.split(","),
         // Transportation is already an array, so we pass it directly
