@@ -7,11 +7,12 @@ const Itinerary = require("./models/Itinerary"); // Import Schema
 
 const app = express();
 app.use(cors({
-  origin: ["https://ai-itinerary-web-omega.vercel.app/", "http://localhost:5173"],
+  // origin: ["https://ai-itinerary-web-omega.vercel.app/", "http://localhost:5173"],
+  origin: "*",
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   credentials: true
 }));
-app.options(/(.*)/, cors()); 
+
 
 app.use(express.json());
 
