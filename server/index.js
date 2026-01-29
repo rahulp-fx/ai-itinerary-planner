@@ -11,6 +11,8 @@ app.use(cors({
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   credentials: true
 }));
+app.options('*', cors()); 
+
 app.use(express.json());
 
 // 1. Connect to MongoDB
