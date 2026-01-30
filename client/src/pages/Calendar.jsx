@@ -24,6 +24,10 @@ export default function Calendar() {
     endDate: "",
   });
 
+const handleChange = (e) => {
+    setFormData({...formData, [e.target.name]: e.target.value});
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     // setLoading(true);
@@ -31,7 +35,7 @@ export default function Calendar() {
     const start = format(dateRange[0].startDate, "dd-mm-yyyy");
     const end = format(dateRange[0].endDate, "dd-mm-yyyy");
 
-    navigate("/interests", {
+    navigate("/logistics", {
       state: {
         startPoint,
         destination,

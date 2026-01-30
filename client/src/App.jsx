@@ -1,10 +1,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import 'react-date-range/dist/styles.css'; // main style file
 import 'react-date-range/dist/theme/default.css'; // theme css file
+import "leaflet/dist/leaflet.css";
 import Home from "./pages/Home";
 import Itinerary from "./pages/Itinerary";
 import Calendar from "./pages/Calendar";
-// import Interests from "./pages/Interests";
+import Logistics from "./pages/Logistics";
+import Interests from "./pages/Interests";
 import "./App.css";
 
 function App() {
@@ -18,7 +20,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/calendar" element={<Calendar />} />
-          {/* <Route path="/interests/:id" element={<Interests />} /> */}
+          <Route path="/logistics" element={<Logistics />} />
+          <Route path="/interests" element={<Interests />} />
           <Route path="/itinerary/:id" element={<Itinerary />} />
         </Routes>
       </div>

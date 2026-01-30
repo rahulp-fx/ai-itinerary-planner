@@ -12,8 +12,12 @@ body {
   color: #333;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 .app-container {
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
   min-height: 100vh;
 }
