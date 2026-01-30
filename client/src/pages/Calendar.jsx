@@ -32,8 +32,8 @@ const handleChange = (e) => {
     e.preventDefault();
     // setLoading(true);
 
-    const start = format(dateRange[0].startDate, "dd-MM-yyyy");
-    const end = format(dateRange[0].endDate, "dd-MM-yyyy");
+    const start = format(dateRange[0].startDate, "yyyy-MM-dd");
+    const end = format(dateRange[0].endDate, "yyyy-MM-dd");
 
     navigate("/logistics", {
       state: {
